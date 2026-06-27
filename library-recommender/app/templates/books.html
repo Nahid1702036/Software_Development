@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% from "_macros.html" import book_card with context %}
+{% block title %}Catalog &middot; Lumi&egrave;re{% endblock %}
+{% block content %}
+
+<div class="page-head reveal">
+  <p class="eyebrow">The collection</p>
+  <h1>Browse the catalog</h1>
+  <p class="lede">Search, filter by genre, and rate anything you&rsquo;ve read.</p>
+</div>
+
+<form class="toolbar reveal" method="get" action="{{ url_for('main.books') }}">
+  <input type="search" name="q" placeholder="Search by title or author&hellip;" value="{{ q }}">
+  <select name="sort" onchange="this.form.submit()">
+    <option value="title"   {{ 'selected' if sort=='title' }}>Sort: Title (A&ndash;Z)</option>
+    <option value="rating"  {{ 'selected' if sort=='rating' }}>Sort: Highest rated</option>
+    <option value="popular" {{ 'selected' if sort=='popular' }}>Sort: Most rated</option>
+    <option value="year"    {{ 'selected' if sort=='year' }}>Sort: Newest</option>
+  </select>
+  <button class="btn sm" type="submit">Search</button>
+  <div class="chips">
+    <a class="chip {{ 'active' if not active_genre }}" href="{{ url_for('main.books', sort=sort, q=q) }}">All</a>
+    {% for g in genres %}
+      <a class="chip {{ 'active' if active_genre==g }}" href="{{ url_for('main.books', genre=g, sort=sort, q=q) }}">{{ g }}</a>
+    {% endfor %}
+  </div>
+</form>
+
+{% if books %}
+  <div class="grid">
+    {% for book in books %}
+      {{ book_card(book, my_score=my_scores.get(book.id), delay=loop.index0 * 40) }}
+    {% endfor %}
+  </div>
+{% else %}
+  <div class="empty reveal">
+    <div class="big">No books found</div>
+    <p>Try a different search or clear the genre filter.</p>
+  </div>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% macro book_card(book, my_score=None, rec=None, delay=0) %}
+<article class="book-card reveal" style="animation-delay: {{ delay }}ms;">
+  {% if my_score %}<span class="your-score">You: {{ my_score }}&#9733;</span>{% endif %}
+  <a href="{{ url_for('main.book_detail', book_id=book.id) }}" class="cover" style="background-color: {{ book.cover_color }};">
+    <span class="genre-tag">{{ book.genre }}</span>
+  </a>
+  <div class="book-body">
+    <h3><a href="{{ url_for('main.book_detail', book_id=book.id) }}">{{ book.title }}</a></h3>
+    <span class="author">{{ book.author }}{% if book.year %}, {{ book.year }}{% endif %}</span>
+    <span class="stars">{{ star_string(book.average_rating) }}<span class="count">{{ book.average_rating }} ({{ book.rating_count }})</span></span>
+    {% if rec %}
+      <span class="reason {{ 'pop' if rec.method == 'popularity' }}">{{ rec.reason }}</span>
+      <span class="pred-badge">&#10022; predicted match {{ "%.1f"|format(rec.predicted_score) }}/5</span>
+    {% endif %}
+  </div>
+</article>
+{% endmacro %}

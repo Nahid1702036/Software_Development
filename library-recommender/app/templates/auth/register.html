@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Join &middot; Lumi&egrave;re{% endblock %}
+{% block content %}
+<div class="auth-wrap">
+  <div class="auth-card reveal">
+    <p class="eyebrow">Become a member</p>
+    <h1>Create your account</h1>
+    <p class="sub">Rate a few books and our engine starts learning your taste.</p>
+    <form method="post" action="{{ url_for('auth.register') }}">
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" value="{{ name or '' }}" required autofocus>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" value="{{ email or '' }}" required>
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <span class="muted" style="font-size:0.8rem;">At least 6 characters.</span>
+      </div>
+      <div class="form-foot">
+        <span class="muted">Already a member? <a href="{{ url_for('auth.login') }}">Sign in</a></span>
+        <button class="btn" type="submit">Join the library</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,335 @@
+user_email,book_isbn,score,review
+alice@readers.dev,9780756404741,5,The ending floored me.
+alice@readers.dev,9780307588364,1,"Not my usual genre, pleasantly surprised."
+alice@readers.dev,9780765382030,5,"Not my usual genre, pleasantly surprised."
+alice@readers.dev,9780399590504,3,
+alice@readers.dev,9780441172719,4,
+alice@readers.dev,9780399167065,2,
+alice@readers.dev,9780553103540,5,The ending floored me.
+alice@readers.dev,9781250301697,2,Re-read it twice.
+alice@readers.dev,9780451524935,1,
+ben@readers.dev,9780399167065,5,"Not my usual genre, pleasantly surprised."
+ben@readers.dev,9780307588364,5,
+ben@readers.dev,9780553103540,4,
+ben@readers.dev,9780451524935,4,
+ben@readers.dev,9780765311788,4,Re-read it twice.
+ben@readers.dev,9780062316097,2,A bit slow in the middle but worth it.
+ben@readers.dev,9780441569595,3,"Not my usual genre, pleasantly surprised."
+ben@readers.dev,9780399590504,1,
+ben@readers.dev,9780374533557,4,
+ben@readers.dev,9780441172719,3,
+ben@readers.dev,9780307269751,5,
+ben@readers.dev,9780593135204,2,Re-read it twice.
+ben@readers.dev,9780061120084,4,Re-read it twice.
+chloe@readers.dev,9780061120084,5,
+chloe@readers.dev,9780141439518,5,
+chloe@readers.dev,9780451524935,5,"Solid, if predictable."
+chloe@readers.dev,9780441172719,1,A bit slow in the middle but worth it.
+chloe@readers.dev,9780307588364,1,The ending floored me.
+chloe@readers.dev,9780765326355,3,
+chloe@readers.dev,9780765311788,3,
+chloe@readers.dev,9780399167065,2,
+chloe@readers.dev,9780670785933,5,
+chloe@readers.dev,9780374533557,4,
+chloe@readers.dev,9780062316097,5,
+daniel@readers.dev,9780765311788,4,Recommended it to everyone I know.
+daniel@readers.dev,9780307269751,3,Beautifully written.
+daniel@readers.dev,9780486415871,3,
+daniel@readers.dev,9780593135204,5,Re-read it twice.
+daniel@readers.dev,9780451524935,2,Re-read it twice.
+daniel@readers.dev,9780756404741,4,
+daniel@readers.dev,9780399167065,2,A bit slow in the middle but worth it.
+daniel@readers.dev,9780399590504,3,
+daniel@readers.dev,9780441172719,3,
+daniel@readers.dev,9780307588364,3,"Solid, if predictable."
+daniel@readers.dev,9780765326355,4,Recommended it to everyone I know.
+daniel@readers.dev,9781250301697,4,
+daniel@readers.dev,9780553103540,2,
+ella@readers.dev,9780307269751,5,"Not my usual genre, pleasantly surprised."
+ella@readers.dev,9780141439518,1,
+ella@readers.dev,9780399167065,3,Couldn't put it down.
+ella@readers.dev,9780451524935,4,"Not my usual genre, pleasantly surprised."
+ella@readers.dev,9780062316097,2,
+ella@readers.dev,9780553103540,5,
+ella@readers.dev,9780765311788,5,
+ella@readers.dev,9780486415871,2,
+ella@readers.dev,9780061120084,2,The ending floored me.
+ella@readers.dev,9780593135204,2,
+ella@readers.dev,9780756404741,5,A bit slow in the middle but worth it.
+farid@readers.dev,9780141439518,1,"Solid, if predictable."
+farid@readers.dev,9781250301697,2,
+farid@readers.dev,9780765311788,4,
+farid@readers.dev,9780765382030,5,Recommended it to everyone I know.
+farid@readers.dev,9780441569595,5,
+farid@readers.dev,9780399590504,4,
+farid@readers.dev,9780307588364,1,
+farid@readers.dev,9780062316097,2,
+grace@readers.dev,9780593135204,2,
+grace@readers.dev,9780141439518,5,
+grace@readers.dev,9780756404741,3,
+grace@readers.dev,9780374533557,1,Couldn't put it down.
+grace@readers.dev,9780307588364,5,
+grace@readers.dev,9780451524935,5,"Solid, if predictable."
+grace@readers.dev,9780062316097,3,
+grace@readers.dev,9780486415871,4,
+hiro@readers.dev,9780593135204,3,
+hiro@readers.dev,9780765326355,2,
+hiro@readers.dev,9780374533557,5,
+hiro@readers.dev,9780765382030,2,
+hiro@readers.dev,9780141439518,4,
+hiro@readers.dev,9780553103540,3,Re-read it twice.
+hiro@readers.dev,9780307269751,4,
+hiro@readers.dev,9780765311788,1,
+hiro@readers.dev,9780486415871,5,Recommended it to everyone I know.
+ivy@readers.dev,9780062316097,5,
+ivy@readers.dev,9780307588364,3,
+ivy@readers.dev,9780441172719,5,Recommended it to everyone I know.
+ivy@readers.dev,9780399167065,2,
+ivy@readers.dev,9780765326355,4,A bit slow in the middle but worth it.
+ivy@readers.dev,9780451524935,4,
+ivy@readers.dev,9780765311788,1,"Not my usual genre, pleasantly surprised."
+ivy@readers.dev,9780593135204,5,"Overhyped, honestly."
+ivy@readers.dev,9780399590504,5,Couldn't put it down.
+ivy@readers.dev,9780061120084,1,
+ivy@readers.dev,9780765382030,4,Beautifully written.
+jamal@readers.dev,9780593135204,3,Beautifully written.
+jamal@readers.dev,9780451524935,1,
+jamal@readers.dev,9780399590504,4,
+jamal@readers.dev,9780486415871,1,
+jamal@readers.dev,9780756404741,5,
+jamal@readers.dev,9780553103540,4,
+jamal@readers.dev,9780374533557,4,
+jamal@readers.dev,9780399167065,5,
+jamal@readers.dev,9780765326355,4,Beautifully written.
+jamal@readers.dev,9780307588364,5,Re-read it twice.
+jamal@readers.dev,9780061120084,3,
+jamal@readers.dev,9780670785933,3,
+kira@readers.dev,9780307588364,2,
+kira@readers.dev,9780593135204,4,"Not my usual genre, pleasantly surprised."
+kira@readers.dev,9780765311788,4,A bit slow in the middle but worth it.
+kira@readers.dev,9780141439518,4,Recommended it to everyone I know.
+kira@readers.dev,9780553103540,4,
+kira@readers.dev,9780486415871,3,
+kira@readers.dev,9780765382030,4,
+kira@readers.dev,9780399590504,1,
+kira@readers.dev,9780062316097,2,The ending floored me.
+kira@readers.dev,9780451524935,2,
+kira@readers.dev,9780374533557,2,
+leo@readers.dev,9780141439518,5,
+leo@readers.dev,9780374533557,3,
+leo@readers.dev,9780441569595,3,
+leo@readers.dev,9780307588364,3,
+leo@readers.dev,9780553103540,2,A bit slow in the middle but worth it.
+leo@readers.dev,9780399167065,5,"Overhyped, honestly."
+leo@readers.dev,9780399590504,3,"Overhyped, honestly."
+leo@readers.dev,9780756404741,3,The ending floored me.
+leo@readers.dev,9780062316097,3,
+mona@readers.dev,9780141439518,4,
+mona@readers.dev,9780399590504,5,
+mona@readers.dev,9780756404741,4,
+mona@readers.dev,9780307269751,3,Re-read it twice.
+mona@readers.dev,9780062316097,3,
+mona@readers.dev,9780765311788,2,"Not my usual genre, pleasantly surprised."
+mona@readers.dev,9780441569595,1,"Solid, if predictable."
+mona@readers.dev,9780670785933,5,
+mona@readers.dev,9780061120084,5,
+mona@readers.dev,9780399167065,3,
+mona@readers.dev,9780593135204,2,
+mona@readers.dev,9780765382030,1,
+nahid@readers.dev,9780486415871,2,
+nahid@readers.dev,9780765382030,5,
+nahid@readers.dev,9780593135204,5,
+nahid@readers.dev,9780062316097,5,
+nahid@readers.dev,9780451524935,3,
+nahid@readers.dev,9780756404741,4,
+nahid@readers.dev,9780307588364,4,
+nahid@readers.dev,9780765311788,2,"Not my usual genre, pleasantly surprised."
+nahid@readers.dev,9780553103540,4,Recommended it to everyone I know.
+omar@readers.dev,9780765382030,3,
+omar@readers.dev,9780307588364,3,
+omar@readers.dev,9780451524935,3,
+omar@readers.dev,9780765326355,4,
+omar@readers.dev,9780307269751,5,
+omar@readers.dev,9780765311788,5,
+omar@readers.dev,9780441172719,3,
+omar@readers.dev,9780593135204,1,
+omar@readers.dev,9780141439518,3,
+omar@readers.dev,9780374533557,4,
+omar@readers.dev,9780553103540,5,
+omar@readers.dev,9780062316097,3,"Not my usual genre, pleasantly surprised."
+omar@readers.dev,9781250301697,4,
+omar@readers.dev,9780061120084,2,
+omar@readers.dev,9780399590504,3,
+priya@readers.dev,9780441172719,4,The ending floored me.
+priya@readers.dev,9780399590504,2,
+priya@readers.dev,9780756404741,4,
+priya@readers.dev,9780141439518,2,
+priya@readers.dev,9780374533557,1,
+priya@readers.dev,9780553103540,4,Couldn't put it down.
+priya@readers.dev,9781250301697,3,
+priya@readers.dev,9780441569595,4,Beautifully written.
+priya@readers.dev,9780765326355,4,
+priya@readers.dev,9780765382030,4,
+priya@readers.dev,9780399167065,2,Re-read it twice.
+priya@readers.dev,9780061120084,1,
+priya@readers.dev,9780670785933,3,Beautifully written.
+priya@readers.dev,9780765311788,5,Couldn't put it down.
+priya@readers.dev,9780307269751,4,
+quinn@readers.dev,9780141439518,4,
+quinn@readers.dev,9780441569595,3,The ending floored me.
+quinn@readers.dev,9780765326355,4,Re-read it twice.
+quinn@readers.dev,9780765382030,3,
+quinn@readers.dev,9780765311788,3,
+quinn@readers.dev,9780399167065,5,
+quinn@readers.dev,9780670785933,2,
+quinn@readers.dev,9780441172719,3,
+quinn@readers.dev,9781250301697,4,
+quinn@readers.dev,9780307269751,4,
+quinn@readers.dev,9780553103540,4,"Solid, if predictable."
+quinn@readers.dev,9780756404741,2,
+quinn@readers.dev,9780593135204,3,
+quinn@readers.dev,9780486415871,3,
+rosa@readers.dev,9780061120084,3,
+rosa@readers.dev,9780441569595,1,
+rosa@readers.dev,9780399167065,2,
+rosa@readers.dev,9780307588364,3,
+rosa@readers.dev,9781250301697,2,
+rosa@readers.dev,9780441172719,1,"Not my usual genre, pleasantly surprised."
+rosa@readers.dev,9780307269751,2,
+rosa@readers.dev,9780399590504,5,
+rosa@readers.dev,9780451524935,4,
+rosa@readers.dev,9780062316097,4,
+sam@readers.dev,9780307269751,3,Recommended it to everyone I know.
+sam@readers.dev,9780307588364,3,
+sam@readers.dev,9780765382030,5,Re-read it twice.
+sam@readers.dev,9780765311788,1,Recommended it to everyone I know.
+sam@readers.dev,9780441569595,4,Couldn't put it down.
+sam@readers.dev,9780593135204,5,
+sam@readers.dev,9780553103540,1,
+sam@readers.dev,9780399167065,2,
+sam@readers.dev,9780374533557,5,
+sam@readers.dev,9780765326355,2,Couldn't put it down.
+sam@readers.dev,9780062316097,4,
+sam@readers.dev,9780670785933,4,"Solid, if predictable."
+tara@readers.dev,9780374533557,3,
+tara@readers.dev,9780553103540,5,Recommended it to everyone I know.
+tara@readers.dev,9780441172719,2,
+tara@readers.dev,9780399590504,2,
+tara@readers.dev,9780307269751,4,
+tara@readers.dev,9780670785933,1,
+tara@readers.dev,9780765311788,3,
+tara@readers.dev,9780451524935,3,A bit slow in the middle but worth it.
+tara@readers.dev,9780307588364,4,A bit slow in the middle but worth it.
+umar@readers.dev,9780756404741,5,
+umar@readers.dev,9780486415871,3,
+umar@readers.dev,9780451524935,3,
+umar@readers.dev,9780061120084,3,
+umar@readers.dev,9780307269751,2,
+umar@readers.dev,9780670785933,3,
+umar@readers.dev,9780765311788,5,Beautifully written.
+umar@readers.dev,9780441172719,5,
+umar@readers.dev,9780399167065,4,
+umar@readers.dev,9780141439518,2,
+vera@readers.dev,9780141439518,3,Couldn't put it down.
+vera@readers.dev,9780307588364,5,
+vera@readers.dev,9780062316097,2,Beautifully written.
+vera@readers.dev,9780061120084,5,
+vera@readers.dev,9780451524935,5,The ending floored me.
+vera@readers.dev,9780553103540,3,
+vera@readers.dev,9780307269751,3,Re-read it twice.
+vera@readers.dev,9780756404741,2,Beautifully written.
+vera@readers.dev,9780441569595,2,
+vera@readers.dev,9780593135204,2,
+vera@readers.dev,9780486415871,5,
+vera@readers.dev,9780441172719,2,Re-read it twice.
+wei@readers.dev,9780141439518,5,
+wei@readers.dev,9780062316097,4,"Overhyped, honestly."
+wei@readers.dev,9780756404741,3,
+wei@readers.dev,9780451524935,4,
+wei@readers.dev,9780486415871,4,
+wei@readers.dev,9780399590504,5,Beautifully written.
+wei@readers.dev,9780765311788,2,The ending floored me.
+wei@readers.dev,9780307588364,1,
+wei@readers.dev,9780593135204,4,
+xan@readers.dev,9780441172719,4,
+xan@readers.dev,9780061120084,2,
+xan@readers.dev,9780307269751,3,
+xan@readers.dev,9780062316097,5,The ending floored me.
+xan@readers.dev,9780307588364,2,
+xan@readers.dev,9780441569595,4,"Overhyped, honestly."
+xan@readers.dev,9780486415871,4,
+xan@readers.dev,9780765382030,5,
+xan@readers.dev,9780141439518,2,
+yara@readers.dev,9780399590504,1,
+yara@readers.dev,9780670785933,3,
+yara@readers.dev,9780141439518,2,
+yara@readers.dev,9780451524935,4,
+yara@readers.dev,9781250301697,5,Recommended it to everyone I know.
+yara@readers.dev,9780486415871,4,A bit slow in the middle but worth it.
+yara@readers.dev,9780765311788,5,
+yara@readers.dev,9780399167065,5,
+yara@readers.dev,9780062316097,3,
+yara@readers.dev,9780307269751,5,"Solid, if predictable."
+yara@readers.dev,9780441569595,3,The ending floored me.
+yara@readers.dev,9780374533557,3,
+yara@readers.dev,9780061120084,4,
+zane@readers.dev,9781250301697,3,
+zane@readers.dev,9780061120084,2,
+zane@readers.dev,9780399590504,4,Couldn't put it down.
+zane@readers.dev,9780553103540,4,
+zane@readers.dev,9780765326355,4,
+zane@readers.dev,9780765311788,5,
+zane@readers.dev,9780670785933,1,The ending floored me.
+zane@readers.dev,9780486415871,3,Beautifully written.
+zane@readers.dev,9780441172719,4,
+zane@readers.dev,9780451524935,2,
+zane@readers.dev,9780062316097,4,
+zane@readers.dev,9780441569595,4,
+zane@readers.dev,9780307269751,1,
+zane@readers.dev,9780307588364,4,The ending floored me.
+anya@readers.dev,9780451524935,5,The ending floored me.
+anya@readers.dev,9780307269751,4,
+anya@readers.dev,9780441569595,3,
+anya@readers.dev,9780141439518,3,
+anya@readers.dev,9780061120084,5,
+anya@readers.dev,9780553103540,2,
+anya@readers.dev,9780765311788,3,
+anya@readers.dev,9780399590504,3,
+anya@readers.dev,9780374533557,3,
+anya@readers.dev,9780593135204,3,
+anya@readers.dev,9780399167065,5,
+anya@readers.dev,9780441172719,3,"Solid, if predictable."
+bilal@readers.dev,9780374533557,4,Recommended it to everyone I know.
+bilal@readers.dev,9780399167065,4,
+bilal@readers.dev,9780441172719,3,Beautifully written.
+bilal@readers.dev,9780765326355,2,
+bilal@readers.dev,9780307269751,2,
+bilal@readers.dev,9780593135204,3,A bit slow in the middle but worth it.
+bilal@readers.dev,9780670785933,5,"Not my usual genre, pleasantly surprised."
+bilal@readers.dev,9780441569595,4,
+cleo@readers.dev,9780399590504,5,
+cleo@readers.dev,9780399167065,3,
+cleo@readers.dev,9780765326355,2,
+cleo@readers.dev,9780141439518,3,
+cleo@readers.dev,9780756404741,2,
+cleo@readers.dev,9780441172719,5,Couldn't put it down.
+cleo@readers.dev,9780307588364,4,"Solid, if predictable."
+cleo@readers.dev,9780553103540,1,Recommended it to everyone I know.
+cleo@readers.dev,9780765382030,4,
+cleo@readers.dev,9780593135204,5,
+cleo@readers.dev,9780451524935,4,
+cleo@readers.dev,9780441569595,5,The ending floored me.
+cleo@readers.dev,9781250301697,3,
+cleo@readers.dev,9780061120084,3,
+dina@readers.dev,9780553103540,5,
+dina@readers.dev,9780399167065,3,A bit slow in the middle but worth it.
+dina@readers.dev,9780441569595,4,
+dina@readers.dev,9780451524935,1,Couldn't put it down.
+dina@readers.dev,9780062316097,1,Beautifully written.
+dina@readers.dev,9780765311788,5,Recommended it to everyone I know.
+dina@readers.dev,9780486415871,2,"Not my usual genre, pleasantly surprised."
+dina@readers.dev,9780593135204,2,Couldn't put it down.
+dina@readers.dev,9780670785933,2,
+dina@readers.dev,9781250301697,5,
+dina@readers.dev,9780141439518,3,Couldn't put it down.
+dina@readers.dev,9780307588364,4,

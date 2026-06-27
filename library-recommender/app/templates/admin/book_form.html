@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}{{ 'Edit' if book else 'Add' }} book &middot; Admin{% endblock %}
+{% block content %}
+
+<div class="page-head reveal">
+  <p class="eyebrow">Administration</p>
+  <h1>{{ 'Edit book' if book else 'Add a new book' }}</h1>
+</div>
+
+<form method="post" class="rate-box reveal" style="max-width:640px;"
+      action="{{ url_for('admin.edit_book', book_id=book.id) if book else url_for('admin.new_book') }}">
+  <div class="field">
+    <label for="title">Title *</label>
+    <input type="text" id="title" name="title" required
+           value="{{ book.title if book else form.get('title','') }}">
+  </div>
+  <div class="field">
+    <label for="author">Author *</label>
+    <input type="text" id="author" name="author" required
+           value="{{ book.author if book else form.get('author','') }}">
+  </div>
+  <div class="two-col" style="gap:16px;">
+    <div class="field">
+      <label for="genre">Genre</label>
+      <input type="text" id="genre" name="genre"
+             value="{{ book.genre if book else form.get('genre','') }}">
+    </div>
+    <div class="field">
+      <label for="year">Year</label>
+      <input type="number" id="year" name="year"
+             value="{{ book.year if book and book.year else form.get('year','') }}">
+    </div>
+  </div>
+  <div class="two-col" style="gap:16px;">
+    <div class="field">
+      <label for="isbn">ISBN</label>
+      <input type="text" id="isbn" name="isbn"
+             value="{{ book.isbn if book else form.get('isbn','') }}">
+    </div>
+    <div class="field">
+      <label for="cover_color">Cover colour</label>
+      <input type="color" id="cover_color" name="cover_color" style="height:46px;"
+             value="{{ book.cover_color if book else '#7c2d2d' }}">
+    </div>
+  </div>
+  <div class="field">
+    <label for="description">Description</label>
+    <textarea id="description" name="description">{{ book.description if book else form.get('description','') }}</textarea>
+  </div>
+  <div class="form-foot">
+    <a class="btn ghost" href="{{ url_for('admin.books') }}">Cancel</a>
+    <button class="btn" type="submit">{{ 'Save changes' if book else 'Add book' }}</button>
+  </div>
+</form>
+
+{% endblock %}

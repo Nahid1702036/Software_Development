@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}Admin &middot; Lumi&egrave;re{% endblock %}
+{% block content %}
+
+<div class="page-head reveal">
+  <p class="eyebrow">Administration</p>
+  <h1>Library overview</h1>
+  <p class="lede">Collection health, engagement, and the books readers love most.</p>
+</div>
+
+<div class="stat-grid reveal">
+  <div class="stat"><div class="n">{{ stats.books }}</div><div class="l">Books</div></div>
+  <div class="stat"><div class="n">{{ stats.users }}</div><div class="l">Readers</div></div>
+  <div class="stat"><div class="n">{{ stats.ratings }}</div><div class="l">Ratings</div></div>
+  <div class="stat"><div class="n">{{ stats.reviews }}</div><div class="l">Written reviews</div></div>
+</div>
+
+<div style="margin-bottom:30px;">
+  <a class="btn" href="{{ url_for('admin.books') }}">Manage books</a>
+  <a class="btn gold" href="{{ url_for('admin.new_book') }}">+ Add a book</a>
+</div>
+
+<section class="section">
+  <div class="section-title"><h2>Ratings distribution</h2></div>
+  <div class="rate-box bars">
+    {% set total = dist.values()|sum %}
+    {% for score in range(5, 0, -1) %}
+      <div class="bar-row">
+        <span class="stars">{{ ('\u2605' * score) }}</span>
+        <div class="bar-track">
+          <div class="bar-fill" style="width: {{ (dist[score] / total * 100) if total else 0 }}%;"></div>
+        </div>
+        <span class="muted">{{ dist[score] }}</span>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<div class="two-col">
+  <section class="section">
+    <div class="section-title"><h2>Most rated</h2></div>
+    <table class="tbl">
+      <tr><th>Book</th><th>Ratings</th></tr>
+      {% for book, n in most_rated %}
+        <tr><td><a href="{{ url_for('main.book_detail', book_id=book.id) }}">{{ book.title }}</a></td><td>{{ n }}</td></tr>
+      {% endfor %}
+    </table>
+  </section>
+
+  <section class="section">
+    <div class="section-title"><h2>Highest rated</h2><span class="note">min. 3 votes</span></div>
+    <table class="tbl">
+      <tr><th>Book</th><th>Avg</th><th>Votes</th></tr>
+      {% for book, avg, n in highest %}
+        <tr><td><a href="{{ url_for('main.book_detail', book_id=book.id) }}">{{ book.title }}</a></td>
+            <td>{{ "%.2f"|format(avg) }}</td><td>{{ n }}</td></tr>
+      {% endfor %}
+    </table>
+  </section>
+</div>
+
+{% endblock %}

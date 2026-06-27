@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% from "_macros.html" import book_card with context %}
+{% block title %}{{ book.title }} &middot; Lumi&egrave;re{% endblock %}
+{% block content %}
+
+<a href="{{ url_for('main.books') }}" class="muted reveal" style="display:inline-block;margin-bottom:18px;">&larr; Back to catalog</a>
+
+<div class="detail reveal">
+  <div class="big-cover" style="background-color: {{ book.cover_color }};">
+    <span class="genre-tag" style="position:relative;z-index:1;align-self:flex-start;">{{ book.genre }}</span>
+    <h2>{{ book.title }}</h2>
+  </div>
+  <div>
+    <p class="eyebrow">{{ book.author }}</p>
+    <h1 style="font-size:2.4rem;">{{ book.title }}</h1>
+    <div class="meta-row">
+      <span><b>{{ star_string(book.average_rating) }}</b> {{ book.average_rating }}/5</span>
+      <span><b>{{ book.rating_count }}</b> rating{{ 's' if book.rating_count != 1 }}</span>
+      {% if book.year %}<span>Published <b>{{ book.year }}</b></span>{% endif %}
+      {% if book.isbn %}<span>ISBN <b>{{ book.isbn }}</b></span>{% endif %}
+    </div>
+    <p class="desc">{{ book.description }}</p>
+
+    <div class="rate-box">
+      <h3 style="margin-bottom:12px;">{{ 'Update your rating' if my_rating else 'Rate this book' }}</h3>
+      <form method="post" action="{{ url_for('main.rate', book_id=book.id) }}">
+        <div class="starpick" role="radiogroup" aria-label="Star rating">
+          {% for i in range(5, 0, -1) %}
+            <input type="radio" id="star{{ i }}" name="score" value="{{ i }}"
+                   {{ 'checked' if my_rating and my_rating.score == i }}>
+            <label for="star{{ i }}" title="{{ i }} star{{ 's' if i != 1 }}">&#9733;</label>
+          {% endfor %}
+        </div>
+        <div class="field" style="margin-top:14px;">
+          <label for="review">Your review <span class="muted" style="text-transform:none;">(optional)</span></label>
+          <textarea id="review" name="review" placeholder="What did you think?">{{ my_rating.review if my_rating else '' }}</textarea>
+        </div>
+        <button class="btn gold" type="submit">{{ 'Update rating' if my_rating else 'Submit rating' }}</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% if also %}
+<section class="section">
+  <div class="section-title"><h2>Readers also enjoyed</h2></div>
+  <div class="grid">
+    {% for b in also %}{{ book_card(b, delay=loop.index0 * 60) }}{% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<section class="section">
+  <div class="section-title">
+    <h2>Reviews</h2>
+    <span class="note">{{ book.reviews|length }} written review{{ 's' if book.reviews|length != 1 }}</span>
+  </div>
+  {% if book.reviews %}
+    {% for r in book.reviews %}
+      <div class="review reveal" style="animation-delay: {{ loop.index0 * 50 }}ms;">
+        <div><span class="who">{{ r.user.name }}</span>
+          <span class="stars">{{ star_string(r.score) }}</span>
+          <span class="when">&middot; {{ r.created_at.strftime('%d %b %Y') }}</span></div>
+        <p>{{ r.review }}</p>
+      </div>
+    {% endfor %}
+  {% else %}
+    <div class="empty"><p>No written reviews yet. Be the first to share your thoughts.</p></div>
+  {% endif %}
+</section>
+
+{% endblock %}

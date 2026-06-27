@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% from "_macros.html" import book_card with context %}
+{% block title %}My Shelf &middot; Lumi&egrave;re{% endblock %}
+{% block content %}
+
+<div class="page-head reveal">
+  <p class="eyebrow">{{ current_user.email }}</p>
+  <h1>{{ current_user.name }}&rsquo;s shelf</h1>
+  {% if current_user.bio %}<p class="lede">{{ current_user.bio }}</p>{% endif %}
+</div>
+
+<div class="stat-grid reveal">
+  <div class="stat"><div class="n">{{ my_ratings|length }}</div><div class="l">Books rated</div></div>
+  <div class="stat"><div class="n">{{ avg_given }}</div><div class="l">Avg score given</div></div>
+  <div class="stat"><div class="n">{{ fav_genre }}</div><div class="l">Favourite genre</div></div>
+</div>
+
+<div class="two-col">
+  <section class="section">
+    <div class="section-title"><h2>Edit details</h2></div>
+    <form method="post" action="{{ url_for('main.profile') }}" class="rate-box">
+      <div class="field">
+        <label for="name">Display name</label>
+        <input type="text" id="name" name="name" value="{{ current_user.name }}">
+      </div>
+      <div class="field">
+        <label for="bio">Bio</label>
+        <textarea id="bio" name="bio" maxlength="280" placeholder="A line about your reading taste&hellip;">{{ current_user.bio }}</textarea>
+      </div>
+      <button class="btn" type="submit">Save changes</button>
+    </form>
+  </section>
+
+  <section class="section">
+    <div class="section-title"><h2>Top rated by you</h2></div>
+    {% if my_ratings %}
+      {% for r in my_ratings[:6] %}
+        <div class="review reveal" style="animation-delay: {{ loop.index0 * 40 }}ms;">
+          <div><span class="who"><a href="{{ url_for('main.book_detail', book_id=r.book.id) }}">{{ r.book.title }}</a></span>
+            <span class="stars">{{ star_string(r.score) }}</span></div>
+          {% if r.review %}<p class="muted">{{ r.review }}</p>{% endif %}
+        </div>
+      {% endfor %}
+    {% else %}
+      <div class="empty"><p>You haven&rsquo;t rated anything yet.</p></div>
+    {% endif %}
+  </section>
+</div>
+
+{% endblock %}

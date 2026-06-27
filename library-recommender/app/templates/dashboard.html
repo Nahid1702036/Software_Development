@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% from "_macros.html" import book_card with context %}
+{% block title %}For You &middot; Lumi&egrave;re{% endblock %}
+{% block content %}
+
+<div class="page-head reveal">
+  <p class="eyebrow">Recommended for you</p>
+  <h1>Hello, {{ current_user.name.split()[0] }}.</h1>
+  {% if is_cold_start %}
+    <p class="lede">You&rsquo;re just getting started. Below are books loved across the library &mdash;
+      rate a handful and your picks will become personal.</p>
+  {% else %}
+    <p class="lede">These come from readers whose taste closely matches yours, scored by
+      <b>{{ method }}</b> similarity collaborative filtering.</p>
+  {% endif %}
+</div>
+
+<section class="section">
+  <div class="section-title">
+    <h2>{% if is_cold_start %}Popular right now{% else %}Picked for your shelf{% endif %}</h2>
+    <span class="note">{{ rec_cards|length }} recommendation{{ 's' if rec_cards|length != 1 }}</span>
+  </div>
+
+  {% if rec_cards %}
+    <div class="grid">
+      {% for card in rec_cards %}
+        {{ book_card(card.book, rec=card.rec, delay=loop.index0 * 60) }}
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="empty reveal">
+      <div class="big">Nothing to recommend yet</div>
+      <p>Head to the <a href="{{ url_for('main.books') }}">catalog</a> and rate a few books to get started.</p>
+    </div>
+  {% endif %}
+</section>
+
+<section class="section">
+  <div class="section-title">
+    <h2>Your recent ratings</h2>
+    <span class="note"><a href="{{ url_for('main.profile') }}">View full shelf &rarr;</a></span>
+  </div>
+  {% if my_ratings %}
+    <div class="grid">
+      {% for r in my_ratings[:4] %}
+        {{ book_card(r.book, my_score=r.score, delay=loop.index0 * 60) }}
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="empty reveal">
+      <div class="big">Your shelf is empty</div>
+      <p>Rate books in the <a href="{{ url_for('main.books') }}">catalog</a> to teach the engine your taste.</p>
+    </div>
+  {% endif %}
+</section>
+
+{% endblock %}
